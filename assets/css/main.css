@@ -98,7 +98,7 @@ input, select, textarea {
 	}
 
 	body {
-		background: #312450;
+		background: #2f0f79;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -2444,7 +2444,7 @@ input, select, textarea {
 		input[type="radio"]:checked + label:before {
 			background: #ffffff;
 			border-color: #ffffff;
-			color: #b74e91;
+			color: #3f072b;
 			content: '\f00c';
 		}
 
@@ -2536,7 +2536,7 @@ input, select, textarea {
 			}
 
 				.wrapper.style1 .icon.major:before {
-					color: #5e42a6;
+					color: #2d136e;
 				}
 
 				.wrapper.style1-alt .icon.major:before {
@@ -2552,7 +2552,7 @@ input, select, textarea {
 				}
 
 				.wrapper.style3 .icon.major:before {
-					color: #b74e91;
+					color: #860c5a;
 				}
 
 				.wrapper.style3-alt .icon.major:before {
@@ -3240,15 +3240,15 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #5e42a6;
+			background-color: #1b084b;
 		}
 
 		.wrapper.style1-alt {
-			background-color: #493382;
+			background-color: #210c57;
 		}
 
 		.wrapper.style2 {
-			background-color: #5052b5;
+			background-color: #2b2c63;
 		}
 
 		.wrapper.style2-alt {
@@ -3256,7 +3256,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #b74e91;
+			background-color: #1f0535;
 		}
 
 		.wrapper.style3-alt {
@@ -3882,6 +3882,7 @@ input, select, textarea {
 
 		#intro p {
 			font-size: 1.25em;
+			font-family:'Courier New', Courier, monospace;
 		}
 
 			@media screen and (max-width: 980px) {
