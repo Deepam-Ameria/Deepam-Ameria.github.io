@@ -1,187 +1,560 @@
 <!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
 <html>
 	<head>
-		<title>Deepam Ameria's Website</title>
+		<title>Deepam Ameria - Robotics Engineer</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a> -->
-					<div class="profile-picture" style="text-align: center; padding: 20px;">
-						<a href="#" class="image"><img src="images/dameria_3.jpg" alt="" style="max-width: 100%; " /></a>
-					</div>	
-					<nav>
-						<ul>
-							<li><a href="#intro">About Me</a></li>
-							<li><a href="projects.html">Projects</a></li>
-							<!-- <li><a href="#two">What we do</a></li> -->
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
+		<!-- Header -->
+		<header id="header">
+			<div class="header-container">
+				<div class="logo">
+					<a href="#intro">Deepam Ameria</a>
+				</div>
+				<nav class="nav">
+					<ul>
+						<li><a href="#intro">About</a></li>
+						<li><a href="#projects">Projects</a></li>
+						<li><a href="#experience">Experience</a></li>
+						<li><a href="#technologies">Technologies</a></li>
+						<li><a href="#coursework">Coursework</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</nav>
+				<div class="theme-toggle-container">
+					<label class="theme-slider">
+						<input type="checkbox" id="theme-toggle" />
+						<span class="slider"></span>
+						<span class="theme-icons">
+							<span class="sun-icon">☀️</span>
+							<span class="moon-icon">🌙</span>
+						</span>
+					</label>
+				</div>
+			</div>
+		</header>
+
+		<!-- Main Content -->
+		<main id="main">
+			<!-- Hero Section -->
+			<section id="intro" class="hero">
+				<div class="hero-container">
+					<div class="hero-content">
+						<div class="hero-text">
+							<div class="typewriter-container">
+								<h1 class="hero-title typewriter">
+									<span class="typewriter-text">Hello world, Deepam Ameria here</span>
+									<span class="cursor">|</span>
+								</h1>
+							</div>
+							<h2 class="hero-subtitle">
+								Roboticist
+							</h2>
+							<p class="hero-description">
+								I'm a 2nd year Masters in Robotic Systems Development student at Carnegie Mellon University, I love working on and building robotic systems and pushing the boundaries of what robots can achieve using AI-driven perception, controls and innovation. My passion lies in creating autonomous systems that can operate in extreme environments and learn from their interactions with the world.
+							</p>
+							<div class="hero-actions">
+								<a href="#projects" class="btn btn-primary">View My Work</a>
+								<button class="btn btn-secondary" id="resume-btn">Resume</button>
+							</div>
+						</div>
+						<div class="hero-image">
+							<div class="image-container">
+								<img src="images/dameria_3.jpg" alt="Deepam Ameria" />
+								<div class="image-overlay"></div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+			<!-- About Section -->
+			<section id="about" class="about">
+				<div class="container">
+					<div class="section-header">
+						<h2 class="section-title">👨‍💻 About Me</h2>
+						<p class="section-subtitle">Passionate about robotics and innovation</p>
+					</div>
+					<div class="about-content">
+						<div class="about-text">
+							<p>
+								I have worked, and am working on a variety of projects and systems and vehicles and robots and softwwares and teams and what not.
+							</p>
+							<p>Currently, I'm developing <strong>Lunar ROADSTER</strong> as part of my capstone project under the guidance of <a href="https://www.ri.cmu.edu/ri-faculty/william-red-l-whittaker/" target="_blank">Dr. William "Red" Whittaker</a>. It involves making an autonomous lunar rover that can groom the craters and create traversable surface trails for future space exploration. This project perfectly embodies my vision of robotics advancing human capabilities beyond Earth's boundaries.
+							</p>
+							<p>
+								My work focuses on creating autonomous systems that can operate in extreme environments and learn from their interactions with the world. I'm particularly interested in the intersection of mechanical engineering, controls, and cutting-edge AI.
+							</p>
+						</div>
+							<div class="about-skills">
+								<h3>🎯 Core Expertise</h3>
+								<div class="skills-grid">
+									<div class="skill-item">
+										<span class="skill-icon">🤖</span>
+										<span class="skill-text">Robot Learning & Perception</span>
+									</div>
+									<div class="skill-item">
+										<span class="skill-icon">🚀</span>
+										<span class="skill-text">Space Robotics & Autonomous Systems</span>
+									</div>
+									<div class="skill-item">
+										<span class="skill-icon">⚡</span>
+										<span class="skill-text">Electric Powertrains & Controls</span>
+									</div>
+									<div class="skill-item">
+										<span class="skill-icon">🔧</span>
+										<span class="skill-text">Mechatronic Design & Integration</span>
+									</div>
+								</div>
+							</div>
+					</div>
+				</div>
+			</section>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
+			<!-- Projects Section -->
+			<section id="projects" class="projects">
+				<div class="container">
+					<div class="section-header">
+						<h2 class="section-title">🚀 Featured Projects</h2>
+						<p class="section-subtitle">Some of my recent work in robotics and engineering</p>
+					</div>
+					<div class="projects-grid">
+						<div class="project-card" data-project="lunar-roadster">
+							<div class="project-image">
+								<img src="images/LR Cover.png" alt="Lunar ROADSTER" />
+								<div class="project-overlay">
+									<button class="project-btn">View Details</button>
+								</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Lunar ROADSTER</h3>
+								<p class="project-description">Autonomous lunar surface grooming technology for future space exploration missions.</p>
+								<div class="project-tech">
+									<span class="tech-tag">Space Robotics</span>
+									<span class="tech-tag">Autonomous Systems</span>
+									<span class="tech-tag">Mechanical Design</span>
+								</div>
+							</div>
+						</div>
 
-							<div>
-								<h1><code>hello world! Deepam Ameria here</code></h1>
-								<p> I'm pursuing a Master's in Robotic Systems Development (MRSD) at the <a href="https://www.ri.cmu.edu/">Robotics Institute</a> of Carnegie Mellon University. </p>
-								<p> With a background in controls, mechatronic systems, mechanical design and electric powertrain, I'm fueled by a strong passion for perception, robot learning, space robotics, and innovations driven by AI.</p>
-								<p> My latest project Lunar ROADSTER, is perfectly aligned with my skills and interests in Space Robotics. As I work on this under the tutelage of <a href="https://www.ri.cmu.edu/ri-faculty/william-red-l-whittaker/">Dr. William "Red" Whittaker</a>, you can check the <a href="https://mrsdprojects.ri.cmu.edu/2025teami/">Lunar ROADSTER Website</a>  for the latest updates </p>
-								<ul class="actions">
-									<li><a href="projects.html" class="button scrolly">Projects</a></li>
-									<li><a href="Deepam Ameria CV.pdf" class="button scrolly">Resume</a></li>
+						<div class="project-card" data-project="robot-swordfighting">
+							<div class="project-image">
+								<img src="images/Autonomy Cover.png" alt="Robot Swordfighting" />
+								<div class="project-overlay">
+									<button class="project-btn">View Details</button>
+								</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Motion Tracking Robot Swordfighting</h3>
+								<p class="project-description">Real-time motion tracking and robotic control for dynamic sword defense using Franka Panda.</p>
+								<div class="project-tech">
+									<span class="tech-tag">Computer Vision</span>
+									<span class="tech-tag">Motion Tracking</span>
+									<span class="tech-tag">Real-time Control</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="project-card" data-project="self-balancing">
+							<div class="project-image">
+								<img src="images/Self-Balancing Droid.png" alt="Self-Balancing Robot" />
+								<div class="project-overlay">
+									<button class="project-btn">View Details</button>
+								</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Self-Balancing Droid</h3>
+								<p class="project-description">Advanced control systems robot demonstrating PID control and mechatronic design principles.</p>
+								<div class="project-tech">
+									<span class="tech-tag">Control Systems</span>
+									<span class="tech-tag">PID Control</span>
+									<span class="tech-tag">Embedded Systems</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="project-card" data-project="drag-reduction">
+							<div class="project-image">
+								<img src="images/DRS.png" alt="Drag Reduction System" />
+								<div class="project-overlay">
+									<button class="project-btn">View Details</button>
+								</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">Automatic Drag-Reduction System</h3>
+								<p class="project-description">Intelligent aerodynamic system for high-performance vehicles with real-time optimization.</p>
+								<div class="project-tech">
+									<span class="tech-tag">Aerodynamics</span>
+									<span class="tech-tag">CFD Analysis</span>
+									<span class="tech-tag">Adaptive Control</span>
+								</div>
+							</div>
+						</div>
+
+						<div class="project-card" data-project="fsae-battery">
+							<div class="project-image">
+								<img src="images/pic03.jpg" alt="FSAE Electric Vehicle" />
+								<div class="project-overlay">
+									<button class="project-btn">View Details</button>
+								</div>
+							</div>
+							<div class="project-content">
+								<h3 class="project-title">High-Voltage Li-Po Battery Pack (FSAE)</h3>
+								<p class="project-description">600V lithium-polymer battery pack for Formula SAE electric race car competition.</p>
+								<div class="project-tech">
+									<span class="tech-tag">Power Systems</span>
+									<span class="tech-tag">Battery Management</span>
+									<span class="tech-tag">FSAE Competition</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Experience Section -->
+			<section id="experience" class="experience">
+				<div class="container">
+					<div class="section-header">
+						<h2 class="section-title">💼 Professional Experience</h2>
+						<p class="section-subtitle">My journey in robotics and engineering spans academic research, industry projects, and hands-on development</p>
+					</div>
+					<div class="experience-timeline">
+						<!-- Current Role -->
+						<div class="experience-item current">
+							<div class="experience-header">
+								<h3>Graduate Research Assistant</h3>
+								<div class="experience-meta">
+									<span class="company">Carnegie Mellon University - Robotics Institute</span>
+									<span class="duration">Aug 2023 - Present</span>
+								</div>
+							</div>
+							<div class="experience-content">
+								<p>Leading research and development for the Lunar ROADSTER project under Dr. William "Red" Whittaker, focusing on autonomous lunar surface grooming technology for future space exploration missions.</p>
+								<ul class="achievements">
+									<li>Designed and developed dozer blade assembly for lunar regolith manipulation</li>
+									<li>Implemented tool planning algorithms for autonomous surface grooming operations</li>
+									<li>Collaborated with multidisciplinary team of engineers and researchers</li>
+									<li>Presented research findings at international robotics conferences</li>
 								</ul>
+								<div class="tech-used">
+									<span class="tech-tag">Space Robotics</span>
+									<span class="tech-tag">Autonomous Systems</span>
+									<span class="tech-tag">Mechanical Design</span>
+									<span class="tech-tag">Path Planning</span>
+								</div>
 							</div>
 						</div>
-					</section>
 
-				<!-- One
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image">
-								<img src="images/Lunar ROADSTER.png" alt="" data-position="center center" class="fixed-size"/>
-							</a>
-							<div class="content">
-								<div class="inner">
-									<h2>Lunar ROADSTER</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
+						<!-- AlphaZ Experience -->
+						<div class="experience-item">
+							<div class="experience-header">
+								<h3>Robotics Engineer Intern</h3>
+								<div class="experience-meta">
+									<span class="company">AlphaZ AI Technologies</span>
+									<span class="duration">Jun 2022 - Aug 2022</span>
 								</div>
 							</div>
-						</section>
-						<section>
-							<a href="#" class="image">
-								<img src="images/Self-Balancing Droid.png" alt="" data-position="top center" class = "fixed-size"/>
-							</a>
-							<div class="content">
-								<div class="inner">
-									<h2>Self-Balancing Droid</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
+							<div class="experience-content">
+								<p>Developed AI-powered robotic solutions for industrial automation, focusing on computer vision and machine learning applications for quality control and process optimization.</p>
+								<ul class="achievements">
+									<li>Implemented real-time object detection and classification algorithms using TensorFlow and OpenCV</li>
+									<li>Designed and deployed robotic vision systems for automated quality inspection</li>
+									<li>Reduced inspection time by 40% through intelligent automation</li>
+									<li>Collaborated with cross-functional teams to integrate AI solutions into production lines</li>
+								</ul>
+								<div class="tech-used">
+									<span class="tech-tag">Computer Vision</span>
+									<span class="tech-tag">Machine Learning</span>
+									<span class="tech-tag">TensorFlow</span>
+									<span class="tech-tag">Industrial Automation</span>
 								</div>
 							</div>
-						</section>
-						<section>
-							<a href="#" class="image">
-								<img src="images/DRS.png" alt="" data-position="center center" class = "fixed-size"/>
-							</a>
-							<div class="content">
-								<div class="inner">
-									<h2>Automatic Drag-Reduction System</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>High-Voltage Li-Po Battery Pack for an electric race car (FSAE)</h2>
-									<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
-						
-					</section> -->
-
-				<!-- Two -->
-					<!-- <section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
 						</div>
-					</section> -->
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p></p>
-								<section>
-											<ul class="icons">
-												<li><a href="https://github.com/Deepam-Ameria" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="https://www.linkedin.com/in/deepam-ameria/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									
-								</section>
+						<!-- Yulu Experience -->
+						<div class="experience-item">
+							<div class="experience-header">
+								<h3>Electric Vehicle Systems Engineer</h3>
+								<div class="experience-meta">
+									<span class="company">Yulu Bikes</span>
+									<span class="duration">Jan 2022 - May 2022</span>
+								</div>
+							</div>
+							<div class="experience-content">
+								<p>Worked on electric vehicle powertrain systems and battery management for shared mobility solutions, focusing on performance optimization and safety systems.</p>
+								<ul class="achievements">
+									<li>Optimized battery management systems for improved range and charging efficiency</li>
+									<li>Developed predictive maintenance algorithms for fleet management</li>
+									<li>Improved vehicle efficiency by 15% through powertrain optimization</li>
+									<li>Designed safety systems for high-voltage electric vehicle components</li>
+								</ul>
+								<div class="tech-used">
+									<span class="tech-tag">Electric Vehicles</span>
+									<span class="tech-tag">Battery Management</span>
+									<span class="tech-tag">Fleet Management</span>
+									<span class="tech-tag">Safety Systems</span>
+								</div>
+							</div>
 						</div>
-					</section>
 
+						<!-- Orion Racing India Experience -->
+						<div class="experience-item">
+							<div class="experience-header">
+								<h3>Powertrain Systems Engineer</h3>
+								<div class="experience-meta">
+									<span class="company">Orion Racing India (FSAE Team)</span>
+									<span class="duration">Sep 2020 - Jun 2022</span>
+								</div>
+							</div>
+							<div class="experience-content">
+								<p>Led powertrain design and development for high-performance electric race car, focusing on battery systems, motor controllers, and vehicle dynamics optimization for Formula SAE competition.</p>
+								<ul class="achievements">
+									<li>Designed 600V lithium-polymer battery pack with advanced thermal management</li>
+									<li>Developed custom motor controllers and power distribution systems</li>
+									<li>Led team of 15 engineers in vehicle design and manufacturing</li>
+									<li>Achieved 3rd place in national FSAE electric vehicle competition</li>
+								</ul>
+								<div class="tech-used">
+									<span class="tech-tag">Electric Vehicles</span>
+									<span class="tech-tag">Power Systems</span>
+									<span class="tech-tag">CAD Design</span>
+									<span class="tech-tag">FSAE Competition</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Technologies Section -->
+			<section id="technologies" class="technologies">
+				<div class="container">
+					<div class="section-header">
+						<h2 class="section-title">⚙️ Technologies & Platforms</h2>
+						<p class="section-subtitle">I've worked with a diverse range of cutting-edge technologies, from autonomous robots to high-performance electric vehicles</p>
+					</div>
+					<div class="tech-categories">
+						<!-- Robotics & AI -->
+						<div class="tech-category">
+							<h3>🤖 Robotics & Artificial Intelligence</h3>
+							<div class="tech-grid">
+								<div class="tech-item">
+									<div class="tech-icon">🤖</div>
+									<h4>Robot Operating System (ROS)</h4>
+									<p>Advanced development and deployment of autonomous robotic systems using ROS1/ROS2</p>
+									<div class="tech-level">Expert</div>
+								</div>
+								<div class="tech-item">
+									<div class="tech-icon">👁️</div>
+									<h4>Computer Vision</h4>
+									<p>Real-time object detection, tracking, and recognition using OpenCV, TensorFlow, and PyTorch</p>
+									<div class="tech-level">Expert</div>
+								</div>
+								<div class="tech-item">
+									<div class="tech-icon">🧠</div>
+									<h4>Machine Learning</h4>
+									<p>Deep learning, reinforcement learning, and neural networks for robot learning</p>
+									<div class="tech-level">Advanced</div>
+								</div>
+								<div class="tech-item">
+									<div class="tech-icon">🎯</div>
+									<h4>Motion Planning</h4>
+									<p>Path planning algorithms, trajectory optimization, and control systems</p>
+									<div class="tech-level">Expert</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Programming & Software -->
+						<div class="tech-category">
+							<h3>💻 Programming & Software Development</h3>
+							<div class="tech-grid">
+								<div class="tech-item">
+									<div class="tech-icon">🐍</div>
+									<h4>Python</h4>
+									<p>Advanced Python development for robotics, data analysis, and machine learning</p>
+									<div class="tech-level">Expert</div>
+								</div>
+								<div class="tech-item">
+									<div class="tech-icon">⚙️</div>
+									<h4>C++</h4>
+									<p>High-performance C++ development for real-time robotics applications</p>
+									<div class="tech-level">Advanced</div>
+								</div>
+								<div class="tech-item">
+									<div class="tech-icon">📊</div>
+									<h4>MATLAB/Simulink</h4>
+									<p>Control system design, simulation, and analysis for robotics applications</p>
+									<div class="tech-level">Expert</div>
+								</div>
+								<div class="tech-item">
+									<div class="tech-icon">🔧</div>
+									<h4>CAD & Design</h4>
+									<p>SolidWorks, Fusion 360, and other CAD tools for mechanical design</p>
+									<div class="tech-level">Expert</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Coursework Section -->
+			<section id="coursework" class="coursework">
+				<div class="container">
+					<div class="section-header">
+						<h2 class="section-title">📚 MRSD Coursework & Studies</h2>
+						<p class="section-subtitle">Advanced robotics education combining theory with hands-on practice at Carnegie Mellon University</p>
+					</div>
+					<div class="coursework-content">
+						<!-- Current Semester -->
+						<div class="semester-section current">
+							<h3>🎓 Current Semester (Spring 2025)</h3>
+							<div class="courses-grid">
+								<div class="course-item">
+									<h4>16-745 Optimal Control and Reinforcement Learning</h4>
+									<p>Advanced study of optimal control theory and reinforcement learning algorithms for robotic systems</p>
+									<div class="course-topics">
+										<span class="topic-tag">Optimal Control Theory</span>
+										<span class="topic-tag">Reinforcement Learning</span>
+										<span class="topic-tag">Policy Gradient Methods</span>
+									</div>
+								</div>
+								<div class="course-item">
+									<h4>16-735 Robot Learning and Manipulation</h4>
+									<p>Comprehensive study of robot learning algorithms and manipulation techniques</p>
+									<div class="course-topics">
+										<span class="topic-tag">Robot Learning</span>
+										<span class="topic-tag">Manipulation Planning</span>
+										<span class="topic-tag">Imitation Learning</span>
+									</div>
+								</div>
+								<div class="course-item">
+									<h4>16-782 Planning and Decision Making in Robotics</h4>
+									<p>Advanced planning algorithms and decision-making frameworks for autonomous robotic systems</p>
+									<div class="course-topics">
+										<span class="topic-tag">Motion Planning</span>
+										<span class="topic-tag">Task Planning</span>
+										<span class="topic-tag">Decision Making</span>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- Previous Semesters -->
+						<div class="semester-section">
+							<h3>📚 Fall 2024</h3>
+							<div class="courses-grid">
+								<div class="course-item completed">
+									<h4>16-720 Computer Vision</h4>
+									<p>Comprehensive study of computer vision algorithms and applications in robotics</p>
+									<div class="course-grade">Grade: A</div>
+								</div>
+								<div class="course-item completed">
+									<h4>16-761 Mobile Robot Programming Laboratory</h4>
+									<p>Hands-on laboratory course focusing on mobile robot programming using ROS</p>
+									<div class="course-grade">Grade: A</div>
+								</div>
+								<div class="course-item completed">
+									<h4>16-811 Mathematical Fundamentals for Robotics</h4>
+									<p>Mathematical foundations essential for robotics including linear algebra and optimization</p>
+									<div class="course-grade">Grade: A-</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<section id="contact" class="contact">
+				<div class="container">
+					<div class="section-header">
+						<h2 class="section-title">📞 Get In Touch</h2>
+						<p class="section-subtitle">Let's discuss robotics, share ideas, or explore collaboration opportunities</p>
+					</div>
+					<div class="contact-content">
+						<div class="contact-info">
+							<div class="contact-item">
+								<h3>Email</h3>
+								<p>dameria@andrew.cmu.edu</p>
+							</div>
+							<div class="contact-item">
+								<h3>Location</h3>
+								<p>Pittsburgh, PA | Carnegie Mellon University</p>
+							</div>
+							<div class="contact-item">
+								<h3>Status</h3>
+								<p>MRSD Student | Open to Opportunities</p>
+							</div>
+						</div>
+						<div class="social-links">
+							<a href="https://github.com/Deepam-Ameria" target="_blank" class="social-link">
+								<span class="social-icon">📱</span>
+								<span>GitHub</span>
+							</a>
+							<a href="https://www.linkedin.com/in/deepam-ameria/" target="_blank" class="social-link">
+								<span class="social-icon">💼</span>
+								<span>LinkedIn</span>
+							</a>
+							<a href="mailto:dameria@andrew.cmu.edu" class="social-link">
+								<span class="social-icon">✉️</span>
+								<span>Email</span>
+							</a>
+							<a href="https://mrsdprojects.ri.cmu.edu/2025teami/" target="_blank" class="social-link">
+								<span class="social-icon">🚀</span>
+								<span>Lunar ROADSTER</span>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- Project Modals -->
+		<div id="modal-overlay" class="modal-overlay">
+			<div class="modal-container">
+				<button class="modal-close" id="modal-close">&times;</button>
+				<div class="modal-content" id="modal-content">
+					<!-- Modal content will be dynamically loaded here -->
+				</div>
 			</div>
+		</div>
+
+		<!-- Resume PDF Modal -->
+		<div id="resume-modal" class="modal-overlay">
+			<div class="modal-container resume-modal-container">
+				<button class="modal-close" id="resume-modal-close">&times;</button>
+				<div class="resume-modal-header">
+					<h2>Deepam Ameria - Resume</h2>
+					<div class="resume-actions">
+						<a href="Deepam Ameria Resume.pdf" target="_blank" class="btn btn-primary">Open in New Window</a>
+						<a href="Deepam Ameria Resume.pdf" download class="btn btn-secondary">Download PDF</a>
+					</div>
+				</div>
+				<div class="resume-modal-content">
+					<iframe src="Deepam Ameria Resume.pdf#toolbar=1&navpanes=1&scrollbar=1" width="100%" height="600px"></iframe>
+				</div>
+			</div>
+		</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
+		<footer id="footer">
+			<div class="container">
+				<div class="footer-content">
+					<p>&copy; 2024 Deepam Ameria. All rights reserved.</p>
+					<p>Built with passion for robotics and innovation</p>
 				</div>
-			</footer>
+			</div>
+		</footer>
 
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
