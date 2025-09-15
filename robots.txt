@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://deepam-ameria.github.io/sitemap.xml
+
+# Disallow certain directories
+Disallow: /assets/
+Disallow: /MRSD/
+Disallow: /*.pdf$
+Disallow: /elements.html
+Disallow: /generic.html
+Disallow: /lunar_roadster.html
+Disallow: /projects.html
+Disallow: /technologies.html
+Disallow: /coursework.html
+Disallow: /experience.html
