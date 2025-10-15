@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalContent = document.getElementById('modal-content');
     const modalClose = document.getElementById('modal-close');
     
-    // Project data
+    // Project data with enhanced media support
     const projectData = {
         'lunar-roadster': {
             title: 'Lunar ROADSTER',
@@ -43,10 +43,18 @@ document.addEventListener('DOMContentLoaded', function() {
             images: [
                 'images/LR Cover.png',
                 'images/Lunar_ROADSTER.png',
-                'images/pic01.jpg'
+                'images/contributions_lr.jpg'
+            ],
+            videos: [
+                'Autograding.mp4'
+            ],
+            gifs: [
+                // Placeholder for additional GIF URLs if needed
             ],
             github: 'https://github.com/Deepam-Ameria/lunar-roadster',
             website: 'https://mrsdprojects.ri.cmu.edu/2025teami/',
+            poster: null, // Add poster URL if available
+            paper: null, // Add paper URL if available
             advisor: 'Dr. William "Red" Whittaker'
         },
         'robot-swordfighting': {
@@ -65,9 +73,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 'images/pic02.jpg',
                 'images/pic03.jpg'
             ],
+            videos: [
+                // Placeholder for video URLs
+            ],
+            gifs: [
+                'Robot_Autonomy_Final.gif'
+            ],
             github: 'https://github.com/Deepam-Ameria/robot-swordfighting',
             website: null,
-            advisor: 'Dr. Howie Choset'
+            poster: null,
+            paper: null,
+            advisor: 'Dr. Oliver Kroemer'
         },
         'self-balancing': {
             title: 'Self-Balancing Droid',
@@ -85,9 +101,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 'images/pic04.jpg',
                 'images/pic05.jpg'
             ],
+            videos: [
+                // Placeholder for video URLs
+                // 'videos/self-balancing-demo.mp4'
+            ],
+            gifs: [
+                // Placeholder for GIF URLs
+                // 'gifs/self-balancing-operation.gif'
+            ],
             github: 'https://github.com/Deepam-Ameria/self-balancing-droid',
             website: null,
-            advisor: 'Dr. Matthew Travers'
+            poster: null,
+            paper: null,
+            advisor: 'Dr. Ajay Gangrade'
         },
         'drag-reduction': {
             title: 'Automatic Drag-Reduction System',
@@ -105,8 +131,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 'images/pic06.jpg',
                 'images/pic01.jpg'
             ],
+            videos: [
+                // Placeholder for video URLs
+                // 'videos/drag-reduction-demo.mp4'
+            ],
+            gifs: [
+                // Placeholder for GIF URLs
+                // 'gifs/drag-reduction-operation.gif'
+            ],
             github: 'https://github.com/Deepam-Ameria/drag-reduction-system',
             website: null,
+            poster: null,
+            paper: null,
             advisor: 'Dr. Rajat Mittal'
         },
         'fsae-battery': {
@@ -125,23 +161,40 @@ document.addEventListener('DOMContentLoaded', function() {
                 'images/pic04.jpg',
                 'images/pic05.jpg'
             ],
+            videos: [
+                // Placeholder for video URLs
+                // 'videos/fsae-battery-demo.mp4'
+            ],
+            gifs: [
+                // Placeholder for GIF URLs
+                // 'gifs/fsae-battery-operation.gif'
+            ],
             github: 'https://github.com/Deepam-Ameria/fsae-battery-pack',
             website: null,
-            advisor: 'Dr. Venkat Viswanathan'
+            poster: null,
+            paper: null,
+            advisor: 'Dr. Manoj Pawar and Dr. Ninad Mehendale'
         }
     };
     
     // Add click listeners to project cards
     projectCards.forEach(card => {
-        card.addEventListener('click', function() {
-            const projectId = this.getAttribute('data-project');
-            const project = projectData[projectId];
-            
-            if (project) {
-                showProjectModal(project);
-            }
-        });
+        const viewDetailsBtn = card.querySelector('.project-btn');
+        
+        // Handle "View Details" button clicks
+        if (viewDetailsBtn) {
+            viewDetailsBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const projectId = card.getAttribute('data-project');
+                const project = projectData[projectId];
+                
+                if (project) {
+                    showProjectModal(project);
+                }
+            });
+        }
     });
+    
     
     // Close modal functionality
     modalClose.addEventListener('click', closeModal);
@@ -186,6 +239,35 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                     
+                    ${project.videos && project.videos.length > 0 ? `
+                        <div class="modal-videos">
+                            <h3>Project Videos</h3>
+                            <div class="video-gallery">
+                                ${project.videos.map(video => `
+                                    <div class="video-item">
+                                        <video controls>
+                                            <source src="${video}" type="video/mp4">
+                                            Your browser does not support the video tag.
+                                        </video>
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                    
+                    ${project.gifs && project.gifs.length > 0 ? `
+                        <div class="modal-gifs">
+                            <h3>Project Animations</h3>
+                            <div class="gif-gallery">
+                                ${project.gifs.map(gif => `
+                                    <div class="gif-item">
+                                        <img src="${gif}" alt="${project.title} animation" />
+                                    </div>
+                                `).join('')}
+                            </div>
+                        </div>
+                    ` : ''}
+                    
                     <div class="modal-images">
                         <h3>Project Images</h3>
                         <div class="image-gallery">
@@ -198,14 +280,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                     
                     <div class="modal-links">
-                        <h3>Project Links</h3>
+                        <h3>Project Resources</h3>
                         <div class="link-buttons">
-                            <a href="${project.github}" target="_blank" class="btn btn-primary">
-                                <span>📱</span> View on GitHub
-                            </a>
+                            ${project.github ? `
+                                <a href="${project.github}" target="_blank" class="btn btn-primary">
+                                    <span>📱</span> View on GitHub
+                                </a>
+                            ` : ''}
                             ${project.website ? `
                                 <a href="${project.website}" target="_blank" class="btn btn-secondary">
                                     <span>🌐</span> Project Website
+                                </a>
+                            ` : ''}
+                            ${project.poster ? `
+                                <a href="${project.poster}" target="_blank" class="btn btn-outline">
+                                    <span>📄</span> View Poster
+                                </a>
+                            ` : ''}
+                            ${project.paper ? `
+                                <a href="${project.paper}" target="_blank" class="btn btn-outline">
+                                    <span>📚</span> Read Paper
                                 </a>
                             ` : ''}
                         </div>
