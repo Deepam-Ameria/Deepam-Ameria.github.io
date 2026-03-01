@@ -1,20 +1,23 @@
 // Theme Toggle Functionality
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('theme-toggle');
-    
-    // Check for saved theme preference or default to dark mode
+
+    // Apply saved theme preference or default to dark mode
     const currentTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (!themeToggle) return;
+
     updateSliderState(currentTheme);
-    
+
     themeToggle.addEventListener('change', function() {
         const newTheme = this.checked ? 'light' : 'dark';
-        
+
         document.documentElement.setAttribute('data-theme', newTheme);
         localStorage.setItem('theme', newTheme);
         updateSliderState(newTheme);
     });
-    
+
     function updateSliderState(theme) {
         themeToggle.checked = theme === 'light';
     }
@@ -26,7 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const modalOverlay = document.getElementById('modal-overlay');
     const modalContent = document.getElementById('modal-content');
     const modalClose = document.getElementById('modal-close');
-    
+
+    if (!modalOverlay || !modalContent || !modalClose || projectCards.length === 0) {
+        return;
+    }
+
     // Project data with enhanced media support
     const projectData = {
         'lunar-roadster': {
@@ -284,22 +291,22 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="link-buttons">
                             ${project.github ? `
                                 <a href="${project.github}" target="_blank" class="btn btn-primary">
-                                    <span>📱</span> View on GitHub
+                                    View on GitHub
                                 </a>
                             ` : ''}
                             ${project.website ? `
                                 <a href="${project.website}" target="_blank" class="btn btn-secondary">
-                                    <span>🌐</span> Project Website
+                                    Project Website
                                 </a>
                             ` : ''}
                             ${project.poster ? `
                                 <a href="${project.poster}" target="_blank" class="btn btn-outline">
-                                    <span>📄</span> View Poster
+                                    View Poster
                                 </a>
                             ` : ''}
                             ${project.paper ? `
                                 <a href="${project.paper}" target="_blank" class="btn btn-outline">
-                                    <span>📚</span> Read Paper
+                                    Read Paper
                                 </a>
                             ` : ''}
                         </div>
@@ -328,23 +335,24 @@ document.addEventListener('DOMContentLoaded', function() {
 // Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('a[href^="#"]');
-    
+
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
-            e.preventDefault();
-            
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
-            
-            if (targetElement) {
-                const headerHeight = document.getElementById('header').offsetHeight;
-                const targetPosition = targetElement.offsetTop - headerHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
+
+            if (!targetElement) return;
+
+            e.preventDefault();
+
+            const header = document.getElementById('header');
+            const headerHeight = header ? header.offsetHeight : 0;
+            const targetPosition = targetElement.offsetTop - headerHeight;
+
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
         });
     });
 });
@@ -354,13 +362,17 @@ document.addEventListener('DOMContentLoaded', function() {
     const resumeBtn = document.getElementById('resume-btn');
     const resumeModal = document.getElementById('resume-modal');
     const resumeModalClose = document.getElementById('resume-modal-close');
-    
+
+    if (!resumeBtn || !resumeModal || !resumeModalClose) {
+        return;
+    }
+
     // Open resume modal
     resumeBtn.addEventListener('click', function() {
         resumeModal.classList.add('active');
         document.body.style.overflow = 'hidden';
     });
-    
+
     // Close resume modal
     resumeModalClose.addEventListener('click', closeResumeModal);
     resumeModal.addEventListener('click', function(e) {
@@ -368,38 +380,16 @@ document.addEventListener('DOMContentLoaded', function() {
             closeResumeModal();
         }
     });
-    
+
     // Close resume modal with Escape key
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape' && resumeModal.classList.contains('active')) {
             closeResumeModal();
         }
     });
-    
+
     function closeResumeModal() {
         resumeModal.classList.remove('active');
         document.body.style.overflow = 'auto';
     }
-});
-
-// Add fade-in animation on scroll
-document.addEventListener('DOMContentLoaded', function() {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in-up');
-            }
-        });
-    }, observerOptions);
-    
-    // Observe all sections
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        observer.observe(section);
-    });
 });
