@@ -1,195 +1,391 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Deepam Ameria's Website</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects — Deepam Ameria</title>
+  <meta name="description" content="Robotics and ML projects by Deepam Ameria — multimodal pedestrian intent prediction, lunar rovers, humanoid soccer, dexterous manipulation, and more." />
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<!-- <a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a> -->
-					<div class="profile-picture" style="text-align: center; padding: 20px;">
-						<a href="#" class="image"><img src="images/dameria_3.jpg" alt="" style="max-width: 100%; " /></a>
-					</div>	
-					<nav>
-						<ul>
-							<li><a href="index.html">About Me</a></li>
-							<li><a href="#one">Projects</a></li>
-							<li><a href="experience.html">Experience</a></li>
-							<li><a href="technologies.html">Technologies</a></li>
-							<li><a href="coursework.html">Coursework</a></li>
-							<li><a href="interests.html">Interests</a></li>
-							<li><a href="resume.html">Resume</a></li>
-							<li><a href="index.html#three">Contact</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body>
 
+<!-- SIDEBAR -->
+<aside class="sidebar" id="sidebar">
+  <span class="sidebar-label">Projects</span>
+  <nav class="sidebar-nav">
+    <a href="index.html" class="sidebar-link">← Home</a>
+    <a href="#proj-1" class="sidebar-link">Pedestrian Intent</a>
+    <a href="#proj-2" class="sidebar-link">Dexterous Manip</a>
+    <a href="#proj-3" class="sidebar-link">Lunar ROADSTER</a>
+    <a href="#proj-4" class="sidebar-link">Humanoid Soccer</a>
+    <a href="#proj-5" class="sidebar-link">RGB-D Tracking</a>
+    <a href="#proj-6" class="sidebar-link">FSAE Autonomous</a>
+    <a href="#proj-7" class="sidebar-link">Battery Pack</a>
+  </nav>
+  <div class="sidebar-spacer"></div>
+  <div class="sidebar-divider"></div>
+  <div class="sidebar-contact">
+    <a href="https://github.com/Deepam-Ameria" target="_blank" class="sidebar-icon" aria-label="GitHub">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+    </a>
+    <a href="https://www.linkedin.com/in/deepam-ameria/" target="_blank" class="sidebar-icon" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+    </a>
+    <a href="mailto:dameria@andrew.cmu.edu" class="sidebar-icon" aria-label="Email">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+    </a>
+  </div>
+</aside>
 
-		<!-- Wrapper -->
-        <div id="wrapper">
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-logo">Deepam<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="projects.html" class="active">Projects</a>
+      <a href="experience.html">Experience</a>
+      <a href="index.html#education">Education</a>
+      <a href="index.html#contact">Contact</a>
+      <a href="resume.pdf" target="_blank" class="nav-resume">Resume ↗</a>
+    </div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="nav-drawer" id="nav-drawer">
+  <a href="index.html">Home</a>
+  <a href="projects.html">Projects</a>
+  <a href="experience.html">Experience</a>
+  <a href="index.html#education">Education</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="resume.pdf" target="_blank">Resume ↗</a>
+</div>
 
+<!-- PAGE HERO -->
+<div class="page-hero">
+  <div class="container">
+    <p class="section-label">Work</p>
+    <h1>Projects</h1>
+    <p>From multimodal AI and optimal control to space robotics and legged autonomy — all built, tested, and deployed.</p>
+  </div>
+</div>
 
-            <!-- One -->
-                <section id="one" class="wrapper style2 spotlights">
-                    <section>
-                        <a href="#" class="image">
-                            <img src="images/LR Cover.png" alt="" data-position="center center" class="fixed-size"/>
-                        </a>
-                        <div class="content">
-                            <div class="inner">
-                                <h2><a href="lunar_roadster.html">Lunar ROADSTER</a></h2>
-                                <p>Pioneering autonomous lunar surface grooming technology for future space exploration. This cutting-edge rover system is designed to create traversable surface trails on the Moon, enabling sustainable transportation and logistics for human colonization. I'm leading the development of the dozer blade assembly and tool planning algorithms, working directly under Dr. William "Red" Whittaker at CMU's Robotics Institute.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Space Robotics</span>
-                                    <span class="tech-tag">Autonomous Systems</span>
-                                    <span class="tech-tag">Mechanical Design</span>
-                                    <span class="tech-tag">Path Planning</span>
-                                </div>
-                                <ul class="actions">
-                                    <li><a href="https://mrsdprojects.ri.cmu.edu/2025teami/" class="button">Project Website</a></li>
-                                    <li><a href="lunar_roadster.html" class="button">Learn More</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                            <a href="#" class="image">
-                                <img src="images/Autonomy Cover.png" alt="" data-position="center center" class="fixed-size"/>
-                            </a>
-                            <div class="content">
-                                <div class="inner">
-                                    <h2><a href="https://github.com/Deepam-Ameria/robot-swordfighting" target="_blank">Motion Tracking Robot Swordfighting</a></h2>
-                                    <p>An innovative project combining computer vision, real-time motion tracking, and robotic control to program a Franka Panda robot arm for dynamic sword defense. The system uses advanced perception algorithms to detect and predict incoming sword attacks, then executes precise defensive maneuvers in real-time. This project demonstrates the intersection of robotics, computer vision, and human-robot interaction in high-speed scenarios.</p>
-                                    <div class="project-tech">
-                                        <span class="tech-tag">Computer Vision</span>
-                                        <span class="tech-tag">Motion Tracking</span>
-                                        <span class="tech-tag">Real-time Control</span>
-                                        <span class="tech-tag">Franka Panda</span>
-                                    </div>
-                                    <ul class="actions">
-                                        <li><a href="https://github.com/Deepam-Ameria/robot-swordfighting" class="button" target="_blank">GitHub Repo</a></li>
-                                        <li><a href="#" class="button">Demo Video</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                    </section>
-                    <section>
-                        <a href="#" class="image">
-                            <img src="images/Self-Balancing Droid.png" alt="" data-position="top center" class = "fixed-size"/>
-                        </a>
-                        <div class="content">
-                            <div class="inner">
-                                <h2><a href="https://github.com/Deepam-Ameria/self-balancing-droid" target="_blank">Self-Balancing Droid</a></h2>
-                                <p>A sophisticated self-balancing robot that demonstrates advanced control theory and mechatronic design principles. The droid uses IMU sensors, PID control algorithms, and custom motor drivers to maintain perfect balance while navigating various terrains. This project showcases expertise in embedded systems, real-time control, and mechanical design, with applications ranging from personal transportation to advanced robotics platforms.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Control Systems</span>
-                                    <span class="tech-tag">PID Control</span>
-                                    <span class="tech-tag">Embedded Systems</span>
-                                    <span class="tech-tag">Mechatronics</span>
-                                </div>
-                                <ul class="actions">
-                                    <li><a href="https://github.com/Deepam-Ameria/self-balancing-droid" class="button" target="_blank">GitHub Repo</a></li>
-                                    <li><a href="#" class="button">Technical Details</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <a href="#" class="image">
-                            <img src="images/DRS.png" alt="" data-position="center center" class = "fixed-size"/>
-                        </a>
-                        <div class="content">
-                            <div class="inner">
-                                <h2><a href="https://github.com/Deepam-Ameria/drag-reduction-system" target="_blank">Automatic Drag-Reduction System</a></h2>
-                                <p>An intelligent aerodynamic system designed for high-performance vehicles that automatically adjusts body geometry to minimize drag and maximize efficiency. The system uses real-time sensors, computational fluid dynamics analysis, and adaptive control algorithms to optimize vehicle performance across different speed ranges and driving conditions. This project demonstrates expertise in fluid mechanics, control systems, and automotive engineering.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Aerodynamics</span>
-                                    <span class="tech-tag">CFD Analysis</span>
-                                    <span class="tech-tag">Automotive Engineering</span>
-                                    <span class="tech-tag">Adaptive Control</span>
-                                </div>
-                                <ul class="actions">
-                                    <li><a href="https://github.com/Deepam-Ameria/drag-reduction-system" class="button" target="_blank">GitHub Repo</a></li>
-                                    <li><a href="#" class="button">Research Paper</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                    <section>
-                        <a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-                        <div class="content">
-                            <div class="inner">
-                                <h2><a href="https://github.com/Deepam-Ameria/fsae-battery-pack" target="_blank">High-Voltage Li-Po Battery Pack (FSAE)</a></h2>
-                                <p>Designed and developed a high-performance 600V lithium-polymer battery pack for Formula SAE electric race car competition. The system features advanced battery management, thermal regulation, and safety systems to deliver maximum power density while ensuring driver safety. This project showcases expertise in electrical engineering, power systems, and automotive design, with the vehicle achieving top performance in national competitions.</p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">Power Systems</span>
-                                    <span class="tech-tag">Battery Management</span>
-                                    <span class="tech-tag">FSAE Competition</span>
-                                    <span class="tech-tag">High Voltage Design</span>
-                                </div>
-                                <ul class="actions">
-                                    <li><a href="https://github.com/Deepam-Ameria/fsae-battery-pack" class="button" target="_blank">GitHub Repo</a></li>
-                                    <li><a href="#" class="button">Competition Results</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </section>
-                </section>
-                    
-                </section>
+<main>
+<div class="container">
+<div class="projects-page-list">
 
-
-            <!-- Three -->
-                <section id="three" class="wrapper style1 fade-up">
-                    <div class="inner">
-                        <h2>Get in touch</h2>
-                        <p></p>
-                            <section>
-                                        <ul class="icons">
-                                            <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                                            <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                                            <li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                                            <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                                            <li><a href="https://www.linkedin.com/in/deepam-ameria/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-                                        </ul>
-                                    </li>
-                                
-                            </section>
-                    </div>
-                </section>
-
+  <!-- ====================================================
+       1 — Multimodal Pedestrian Intent Detection (CURRENT)
+       ==================================================== -->
+  <div id="proj-1" class="project-full" style="border-color: rgba(63,185,80,0.30); background: linear-gradient(135deg, var(--bg-card) 60%, rgba(63,185,80,0.04) 100%);">
+    <div class="project-full-body">
+      <div class="proj-media">
+        <div class="proj-media-ph">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+          </svg>
+          <span>pedestrian_intent</span>
         </div>
+      </div>
+      <div class="proj-info">
+        <div class="project-badge-live" style="margin-bottom:0.75rem;">ONGOING · Jan 2026 – Present</div>
+        <p class="section-label" style="margin-bottom:0.4rem;">01 · Current Research</p>
+        <h2>Multimodal Pedestrian Intent Prediction</h2>
+        <p class="proj-sub">Text-guided vision transformers for crossing intent prediction on PIE dataset · Autonomous Driving Safety</p>
+        <ul class="proj-bullets">
+          <li>Developing a multimodal intent prediction framework on the PIE dataset (300k+ frames, 1,842 pedestrians), combining visual features with text-based intent prompts to improve robustness in ambiguous crossing scenarios</li>
+          <li>Designing text-guided visual attention mechanisms to ground fine-grained cues — gaze direction, body posture, head orientation — in symbolic traffic context for richer intent understanding</li>
+          <li>Benchmarking established spatio-temporal baselines: PIEint, I3D, SF-GRU, MaskPCPA — evaluating multimodal gains using success% and F1 score</li>
+          <li>Stress-testing zero-shot generalization robustness on VisionTrap edge cases to quantify model reliability in distribution-shifted real-world scenarios</li>
+        </ul>
+        <div class="proj-actions">
+          <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="proj-tech-footer">
+      <span class="tag">Python</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">Transformers</span>
+      <span class="tag">Multimodal ML</span>
+      <span class="tag">Computer Vision</span>
+      <span class="tag">Deep Learning</span>
+      <span class="tag">Autonomous Driving</span>
+      <span class="tag">Attention Mechanisms</span>
+      <span class="tag">PIE Dataset</span>
+    </div>
+  </div>
 
+  <!-- ====================================================
+       2 — Hierarchical Dexterous Manipulation & Humanoid Transfer
+       ==================================================== -->
+  <div id="proj-2" class="project-full reverse">
+    <div class="project-full-body">
+      <div class="proj-media">
+        <div class="proj-media-ph" style="border-right:none; border-left:1px solid var(--border-subtle);">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M7 11.5V14m0-2.5v-6a1.5 1.5 0 113 0m-3 6a1.5 1.5 0 00-3 0v2a7.5 7.5 0 0015 0v-5a1.5 1.5 0 00-3 0m-6-3V11m0-5.5v-1a1.5 1.5 0 013 0v1m0 0V11m0-5.5a1.5 1.5 0 013 0v3m0 0V11"/>
+          </svg>
+          <span>dexterous_manipulation</span>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="project-badge-done" style="margin-bottom:0.75rem;">COMPLETED · Aug – Dec 2025</div>
+        <p class="section-label" style="margin-bottom:0.4rem;">02 · Robot Learning</p>
+        <h2>Hierarchical Dexterous Manipulation &amp; Humanoid Transfer</h2>
+        <p class="proj-sub">Vision-to-action wrist trajectory prediction + PPO dexterous control · ARCTIC dataset · Unitree G1</p>
+        <ul class="proj-bullets">
+          <li>Implemented a hierarchical vision-to-action manipulation framework predicting 6-DoF wrist trajectories from RGB observations using a transformer-based decoder with ResNet-152 visual backbone, trained on the ARCTIC dataset</li>
+          <li>Increased task success rate from <strong style="color:var(--accent);">1.44% → 7.65%</strong> through architectural improvements including positional encoding refinements and curriculum training strategies</li>
+          <li>Trained a low-level dexterous controller using PPO in Isaac Gym across <strong style="color:var(--accent);">2048 parallel environments</strong>, achieving 87.77% completion rate and outperforming the A2C baseline via adaptive variance exploration</li>
+          <li>Studied embodiment transfer by mapping learned dexterous policies to a Unitree G1 humanoid via fingertip correspondence, analyzing policy robustness across morphological gaps</li>
+        </ul>
+        <div class="proj-actions">
+          <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="proj-tech-footer">
+      <span class="tag">Python</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">PPO</span>
+      <span class="tag">Isaac Gym</span>
+      <span class="tag">Transformers</span>
+      <span class="tag">ResNet-152</span>
+      <span class="tag">Deep RL</span>
+      <span class="tag">Dexterous Manipulation</span>
+      <span class="tag">ARCTIC Dataset</span>
+      <span class="tag">Embodiment Transfer</span>
+      <span class="tag">Unitree G1</span>
+      <span class="tag">Sim-to-Real</span>
+    </div>
+  </div>
 
-    <!-- Footer -->
-        <footer id="footer" class="wrapper style1-alt">
-            <div class="inner">
-                <ul class="menu">
-                    <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-                </ul>
-            </div>
-        </footer>
+  <!-- ====================================================
+       3 — Lunar ROADSTER
+       ==================================================== -->
+  <div id="proj-3" class="project-full">
+    <div class="project-full-body">
+      <div class="proj-media">
+        <img src="images/projects/lunar_roadster.png" alt="Lunar ROADSTER autonomous lunar rover" />
+      </div>
+      <div class="proj-info">
+        <div class="project-badge-done" style="margin-bottom:0.75rem;">COMPLETED · Sep 2024 – Dec 2025</div>
+        <p class="section-label" style="margin-bottom:0.4rem;">03 · MRSD Capstone</p>
+        <h2>Lunar ROADSTER</h2>
+        <p class="proj-sub">Full autonomy stack for a lunar-grading rover · Advisor: Dr. William "Red" Whittaker · CMU Robotics Institute</p>
+        <ul class="proj-bullets">
+          <li>Led the end-to-end autonomy stack: depth perception, SkyCam localization, and multi-sensor state estimation within a ROS2 architecture deployed on NVIDIA Jetson hardware</li>
+          <li>Trained a YOLOv8 crater detector for terrain understanding in unstructured lunar analog environments — achieved <strong style="color:var(--accent);">89% high-confidence detection</strong> across 100+ hours of outdoor field testing</li>
+          <li>Built an RGB-D geometric modelling pipeline to estimate crater geometry and plan autonomous grading actions and dozing trajectories during live field trials on the physical rover</li>
+          <li>Integrated SkyCam-based global localization with onboard IMU and depth sensing for robust position estimation in GPS-denied lunar analog terrain</li>
+        </ul>
+        <div class="proj-actions">
+          <a href="https://mrsdprojects.ri.cmu.edu/2025teami/" target="_blank" class="btn btn-outline">Project Site ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="proj-tech-footer">
+      <span class="tag">ROS2</span>
+      <span class="tag">Python</span>
+      <span class="tag">C++</span>
+      <span class="tag">YOLOv8</span>
+      <span class="tag">Deep Learning</span>
+      <span class="tag">NVIDIA Jetson</span>
+      <span class="tag">RGB-D Perception</span>
+      <span class="tag">State Estimation</span>
+      <span class="tag">Path Planning</span>
+      <span class="tag">Space Robotics</span>
+    </div>
+  </div>
 
-    <!-- Scripts -->
-        <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery.scrollex.min.js"></script>
-        <script src="assets/js/jquery.scrolly.min.js"></script>
-        <script src="assets/js/browser.min.js"></script>
-        <script src="assets/js/breakpoints.min.js"></script>
-        <script src="assets/js/util.js"></script>
-        <script src="assets/js/main.js"></script>
+  <!-- ====================================================
+       4 — Humanoid Soccer
+       ==================================================== -->
+  <div id="proj-4" class="project-full reverse">
+    <div class="project-full-body">
+      <div class="proj-media">
+        <div class="proj-media-ph" style="border-right:none; border-left:1px solid var(--border-subtle);">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <span>humanoid_soccer</span>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="project-badge-done" style="margin-bottom:0.75rem;">COMPLETED · Feb – May 2025</div>
+        <p class="section-label" style="margin-bottom:0.4rem;">04 · Optimal Control</p>
+        <h2>Model-Based Control for Humanoid Soccer</h2>
+        <p class="proj-sub">QP + Direct Collocation + IHLQR/TVLQR for target-directed kicking on Unitree G1</p>
+        <ul class="proj-bullets">
+          <li>Developed a model-based control framework for humanoid soccer kicking in the Unitree G1 simulation environment, integrating whole-body planning with accurate ball-strike execution</li>
+          <li>Formulated a Quadratic Program (QP) to compute the optimal foot impulse magnitude, direction, and contact point for target-directed ball strikes given desired shot trajectories</li>
+          <li>Generated dynamically feasible kicking trajectories using Direct Collocation trajectory optimization, enforcing joint limits, ground contact complementarity, and timing constraints</li>
+          <li>Implemented IHLQR and TVLQR for whole-body balance stabilization and accurate trajectory tracking during the pre-kick, contact, and follow-through phases</li>
+        </ul>
+        <div class="proj-actions">
+          <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="proj-tech-footer">
+      <span class="tag">Python</span>
+      <span class="tag">MATLAB</span>
+      <span class="tag">Quadratic Programming</span>
+      <span class="tag">Direct Collocation</span>
+      <span class="tag">IHLQR</span>
+      <span class="tag">TVLQR</span>
+      <span class="tag">Trajectory Optimization</span>
+      <span class="tag">Unitree G1</span>
+      <span class="tag">Optimal Control</span>
+      <span class="tag">Whole-Body Control</span>
+    </div>
+  </div>
 
+  <!-- ====================================================
+       5 — Real-Time RGB-D Object Detection & Tracking
+       ==================================================== -->
+  <div id="proj-5" class="project-full">
+    <div class="project-full-body">
+      <div class="proj-media">
+        <img src="images/projects/swordfighting.gif" alt="Real-time robot tracking and interception demo" />
+      </div>
+      <div class="proj-info">
+        <div class="project-badge-done" style="margin-bottom:0.75rem;">COMPLETED · Feb – May 2025</div>
+        <p class="section-label" style="margin-bottom:0.4rem;">05 · Perception</p>
+        <h2>Real-Time RGB-D Object Detection &amp; Tracking</h2>
+        <p class="proj-sub">YOLOv8-seg + DeepSORT + Intel RealSense depth pipeline integrated with Franka manipulator via ROS</p>
+        <ul class="proj-bullets">
+          <li>Built a real-time detection and tracking pipeline using YOLOv8-seg for instance segmentation and DeepSORT for robust multi-object motion tracking, achieving sub-100 ms end-to-end latency</li>
+          <li>Integrated Intel RealSense depth sensing for 3D spatial awareness — enabling precise object localisation and occlusion-aware tracking across dynamic, fast-moving sequences</li>
+          <li>Designed the full perception stack within ROS for real-time operation and seamless integration with a Franka Panda 7-DOF robotic manipulator for downstream grasping and interception tasks</li>
+          <li>Implemented Cartesian impedance control on the Franka Panda for compliant reactive motions; validated robustness across 50+ live trials with real-time trajectory prediction</li>
+        </ul>
+        <div class="proj-actions">
+          <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="proj-tech-footer">
+      <span class="tag">Python</span>
+      <span class="tag">ROS</span>
+      <span class="tag">YOLOv8</span>
+      <span class="tag">DeepSORT</span>
+      <span class="tag">OpenCV</span>
+      <span class="tag">Intel RealSense</span>
+      <span class="tag">RGB-D</span>
+      <span class="tag">Franka Panda</span>
+      <span class="tag">Impedance Control</span>
+      <span class="tag">Real-time Vision</span>
+      <span class="tag">C++</span>
+    </div>
+  </div>
+
+  <!-- ====================================================
+       6 — FSAE Autonomous Driving Stack
+       ==================================================== -->
+  <div id="proj-6" class="project-full reverse">
+    <div class="project-full-body">
+      <div class="proj-media">
+        <div class="proj-media-ph">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+          </svg>
+          <span>fsae_autonomous</span>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="project-badge-done" style="margin-bottom:0.75rem;">COMPLETED · Jan 2022 – May 2023</div>
+        <p class="section-label" style="margin-bottom:0.4rem;">06 · Autonomous Systems · Orion Racing India</p>
+        <h2>FSAE Autonomous Driving Stack</h2>
+        <p class="proj-sub">LiDAR perception + Pure Pursuit control for Formula SAE Electric autonomous racing</p>
+        <ul class="proj-bullets">
+          <li>Built a real-time LiDAR perception pipeline using the SICK MRS1000, applying DBSCAN-based clustering for cone detection, obstacle segmentation, and race track boundary mapping</li>
+          <li>Integrated perception outputs with a Pure Pursuit trajectory tracker for lane following and obstacle-aware navigation, achieving stable autonomous laps at up to 40 km/h during competition</li>
+          <li>Conducted extensive on-vehicle debugging and system validation — diagnosing calibration errors, latency bottlenecks, and control instability across test sessions on the live race car</li>
+        </ul>
+        <div class="proj-actions">
+          <a href="experience.html" class="btn btn-outline">See in Experience →</a>
+        </div>
+      </div>
+    </div>
+    <div class="proj-tech-footer">
+      <span class="tag">Autonomous Driving</span>
+      <span class="tag">LiDAR</span>
+      <span class="tag">DBSCAN</span>
+      <span class="tag">Pure Pursuit</span>
+      <span class="tag">ROS</span>
+      <span class="tag">Python</span>
+      <span class="tag">C++</span>
+      <span class="tag">SICK MRS1000</span>
+      <span class="tag">FSAE Electric</span>
+    </div>
+  </div>
+
+  <!-- ====================================================
+       7 — EV Battery Pack Design
+       ==================================================== -->
+  <div id="proj-7" class="project-full">
+    <div class="project-full-body">
+      <div class="proj-media">
+        <div class="proj-media-ph">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+          </svg>
+          <span>battery_pack</span>
+        </div>
+      </div>
+      <div class="proj-info">
+        <div class="project-badge-done" style="margin-bottom:0.75rem;">COMPLETED · Jan 2022 – May 2023</div>
+        <p class="section-label" style="margin-bottom:0.4rem;">07 · EV Engineering · Orion Racing India</p>
+        <h2>High-Voltage EV Battery Pack Design</h2>
+        <p class="proj-sub">7.9 kWh, 400 V lithium-polymer pack with BMS telemetry for Formula SAE Electric</p>
+        <ul class="proj-bullets">
+          <li>Led the design and fabrication of a 7.9 kWh, 400 V lithium-polymer battery pack — from cell selection and module layout through structural enclosure, wiring harness, and FSAE safety compliance</li>
+          <li>Integrated a BMS with real-time telemetry and fault reporting into the vehicle software stack for SoC monitoring, over-voltage protection, and cell-level temperature surveillance</li>
+          <li>Designed active thermal management pathways and passive cooling structures to maintain safe cell temperatures during high-discharge race conditions, validated across multiple track sessions</li>
+        </ul>
+        <div class="proj-actions">
+          <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
+        </div>
+      </div>
+    </div>
+    <div class="proj-tech-footer">
+      <span class="tag">Battery Design</span>
+      <span class="tag">BMS</span>
+      <span class="tag">Lithium Polymer</span>
+      <span class="tag">Thermal Management</span>
+      <span class="tag">FSAE Electric</span>
+      <span class="tag">SolidWorks</span>
+      <span class="tag">High Voltage Systems</span>
+      <span class="tag">Embedded Systems</span>
+    </div>
+  </div>
+
+</div><!-- end projects-page-list -->
+</div><!-- end container -->
+</main>
+
+<footer id="footer">
+  <div class="container footer-inner">
+    <p class="footer-copy">© 2025 Deepam Ameria — Built from scratch</p>
+    <div class="footer-links">
+      <a href="https://github.com/Deepam-Ameria" target="_blank">GitHub</a>
+      <a href="https://www.linkedin.com/in/deepam-ameria/" target="_blank">LinkedIn</a>
+      <a href="mailto:dameria@andrew.cmu.edu">Email</a>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
