@@ -24,7 +24,6 @@
     <a href="#proj-3" class="sidebar-link">Lunar ROADSTER</a>
     <a href="#proj-4" class="sidebar-link">Humanoid Soccer</a>
     <a href="#proj-5" class="sidebar-link">RGB-D Tracking</a>
-    <a href="#proj-6" class="sidebar-link">FSAE Autonomous</a>
     <a href="#proj-7" class="sidebar-link">Battery Pack</a>
   </nav>
   <div class="sidebar-spacer"></div>
@@ -73,7 +72,7 @@
   <div class="container">
     <p class="section-label">Work</p>
     <h1>Projects</h1>
-    <p>From multimodal AI and optimal control to space robotics and legged autonomy — all built, tested, and deployed.</p>
+    <p>From multimodal AI and optimal control to space robotics and legged autonomy. All built, tested, and deployed.</p>
   </div>
 </div>
 
@@ -101,10 +100,10 @@
         <h2>Multimodal Pedestrian Intent Prediction</h2>
         <p class="proj-sub">Text-guided vision transformers for crossing intent prediction on PIE dataset · Autonomous Driving Safety</p>
         <ul class="proj-bullets">
-          <li>Developing a multimodal intent prediction framework on the PIE dataset (300k+ frames, 1,842 pedestrians), combining visual features with text-based intent prompts to improve robustness in ambiguous crossing scenarios</li>
-          <li>Designing text-guided visual attention mechanisms to ground fine-grained cues — gaze direction, body posture, head orientation — in symbolic traffic context for richer intent understanding</li>
-          <li>Benchmarking established spatio-temporal baselines: PIEint, I3D, SF-GRU, MaskPCPA — evaluating multimodal gains using success% and F1 score</li>
-          <li>Stress-testing zero-shot generalization robustness on VisionTrap edge cases to quantify model reliability in distribution-shifted real-world scenarios</li>
+          <li>Building a multimodal intent prediction framework on PIE dataset (300k+ frames, 1,842 pedestrians), fusing visual features with text-based intent prompts</li>
+          <li>Designing text-guided attention mechanisms to ground cues like gaze direction, posture, and head orientation in traffic context</li>
+          <li>Benchmarking against PIEint, I3D, SF-GRU, MaskPCPA baselines on success% and F1 score</li>
+          <li>Testing zero-shot generalisation on VisionTrap edge cases to measure robustness under distribution shift</li>
         </ul>
         <div class="proj-actions">
           <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
@@ -143,10 +142,10 @@
         <h2>Hierarchical Dexterous Manipulation &amp; Humanoid Transfer</h2>
         <p class="proj-sub">Vision-to-action wrist trajectory prediction + PPO dexterous control · ARCTIC dataset · Unitree G1</p>
         <ul class="proj-bullets">
-          <li>Implemented a hierarchical vision-to-action manipulation framework predicting 6-DoF wrist trajectories from RGB observations using a transformer-based decoder with ResNet-152 visual backbone, trained on the ARCTIC dataset</li>
-          <li>Increased task success rate from <strong style="color:var(--accent);">1.44% → 7.65%</strong> through architectural improvements including positional encoding refinements and curriculum training strategies</li>
-          <li>Trained a low-level dexterous controller using PPO in Isaac Gym across <strong style="color:var(--accent);">2048 parallel environments</strong>, achieving 87.77% completion rate and outperforming the A2C baseline via adaptive variance exploration</li>
-          <li>Studied embodiment transfer by mapping learned dexterous policies to a Unitree G1 humanoid via fingertip correspondence, analyzing policy robustness across morphological gaps</li>
+          <li>Implemented a hierarchical manipulation framework predicting 6-DoF wrist trajectories from RGB using a transformer decoder with ResNet-152 backbone, trained on ARCTIC dataset</li>
+          <li>Improved task success rate from <strong style="color:var(--accent);">1.44% to 7.65%</strong> via positional encoding refinements and curriculum training</li>
+          <li>Trained a PPO dexterous controller in Isaac Gym across 2048 parallel environments, achieving 87.77% completion (outperforming A2C baseline)</li>
+          <li>Studied embodiment transfer by mapping dexterous policies to Unitree G1 humanoid via fingertip correspondence</li>
         </ul>
         <div class="proj-actions">
           <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
@@ -183,10 +182,10 @@
         <h2>Lunar ROADSTER</h2>
         <p class="proj-sub">Full autonomy stack for a lunar-grading rover · Advisor: Dr. William "Red" Whittaker · CMU Robotics Institute</p>
         <ul class="proj-bullets">
-          <li>Led the end-to-end autonomy stack: depth perception, SkyCam localization, and multi-sensor state estimation within a ROS2 architecture deployed on NVIDIA Jetson hardware</li>
-          <li>Trained a YOLOv8 crater detector for terrain understanding in unstructured lunar analog environments — achieved <strong style="color:var(--accent);">89% high-confidence detection</strong> across 100+ hours of outdoor field testing</li>
-          <li>Built an RGB-D geometric modelling pipeline to estimate crater geometry and plan autonomous grading actions and dozing trajectories during live field trials on the physical rover</li>
-          <li>Integrated SkyCam-based global localization with onboard IMU and depth sensing for robust position estimation in GPS-denied lunar analog terrain</li>
+          <li>Built the full autonomy stack: depth perception, SkyCam localisation, and multi-sensor state estimation in ROS2 on NVIDIA Jetson</li>
+          <li>Trained a YOLOv8 crater detector achieving <strong style="color:var(--accent);">89% high-confidence detection</strong> across 100+ hours of outdoor field testing</li>
+          <li>Built an RGB-D geometric pipeline to estimate crater geometry and plan autonomous grading trajectories during live field trials</li>
+          <li>Integrated SkyCam global localisation with onboard IMU and depth sensing for GPS-denied position estimation</li>
         </ul>
         <div class="proj-actions">
           <a href="https://mrsdprojects.ri.cmu.edu/2025teami/" target="_blank" class="btn btn-outline">Project Site ↗</a>
@@ -227,10 +226,10 @@
         <h2>Model-Based Control for Humanoid Soccer</h2>
         <p class="proj-sub">QP + Direct Collocation + IHLQR/TVLQR for target-directed kicking on Unitree G1</p>
         <ul class="proj-bullets">
-          <li>Developed a model-based control framework for humanoid soccer kicking in the Unitree G1 simulation environment, integrating whole-body planning with accurate ball-strike execution</li>
-          <li>Formulated a Quadratic Program (QP) to compute the optimal foot impulse magnitude, direction, and contact point for target-directed ball strikes given desired shot trajectories</li>
-          <li>Generated dynamically feasible kicking trajectories using Direct Collocation trajectory optimization, enforcing joint limits, ground contact complementarity, and timing constraints</li>
-          <li>Implemented IHLQR and TVLQR for whole-body balance stabilization and accurate trajectory tracking during the pre-kick, contact, and follow-through phases</li>
+          <li>Developed a model-based control framework for humanoid soccer kicking in Unitree G1 simulation, integrating whole-body planning with ball-strike execution</li>
+          <li>Formulated a QP to compute optimal foot impulse, direction, and contact point for target-directed ball strikes</li>
+          <li>Generated feasible kicking trajectories using Direct Collocation, enforcing joint limits and ground contact constraints</li>
+          <li>Implemented IHLQR and TVLQR for balance and trajectory tracking through kick phases</li>
         </ul>
         <div class="proj-actions">
           <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
@@ -265,10 +264,10 @@
         <h2>Real-Time RGB-D Object Detection &amp; Tracking</h2>
         <p class="proj-sub">YOLOv8-seg + DeepSORT + Intel RealSense depth pipeline integrated with Franka manipulator via ROS</p>
         <ul class="proj-bullets">
-          <li>Built a real-time detection and tracking pipeline using YOLOv8-seg for instance segmentation and DeepSORT for robust multi-object motion tracking, achieving sub-100 ms end-to-end latency</li>
-          <li>Integrated Intel RealSense depth sensing for 3D spatial awareness — enabling precise object localisation and occlusion-aware tracking across dynamic, fast-moving sequences</li>
-          <li>Designed the full perception stack within ROS for real-time operation and seamless integration with a Franka Panda 7-DOF robotic manipulator for downstream grasping and interception tasks</li>
-          <li>Implemented Cartesian impedance control on the Franka Panda for compliant reactive motions; validated robustness across 50+ live trials with real-time trajectory prediction</li>
+          <li>Built a real-time YOLOv8-seg + DeepSORT detection and tracking pipeline with sub-100 ms end-to-end latency</li>
+          <li>Integrated Intel RealSense depth sensing for 3D object localisation and occlusion-aware tracking</li>
+          <li>Deployed the full perception stack in ROS, integrated with a Franka Panda arm for grasping and interception tasks</li>
+          <li>Implemented Cartesian impedance control for compliant reactive motions, validated across 50+ live trials</li>
         </ul>
         <div class="proj-actions">
           <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
@@ -291,47 +290,6 @@
   </div>
 
   <!-- ====================================================
-       6 — FSAE Autonomous Driving Stack
-       ==================================================== -->
-  <div id="proj-6" class="project-full reverse">
-    <div class="project-full-body">
-      <div class="proj-media">
-        <div class="proj-media-ph">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
-          </svg>
-          <span>fsae_autonomous</span>
-        </div>
-      </div>
-      <div class="proj-info">
-        <div class="project-badge-done" style="margin-bottom:0.75rem;">COMPLETED · Jan 2022 – May 2023</div>
-        <p class="section-label" style="margin-bottom:0.4rem;">06 · Autonomous Systems · Orion Racing India</p>
-        <h2>FSAE Autonomous Driving Stack</h2>
-        <p class="proj-sub">LiDAR perception + Pure Pursuit control for Formula SAE Electric autonomous racing</p>
-        <ul class="proj-bullets">
-          <li>Built a real-time LiDAR perception pipeline using the SICK MRS1000, applying DBSCAN-based clustering for cone detection, obstacle segmentation, and race track boundary mapping</li>
-          <li>Integrated perception outputs with a Pure Pursuit trajectory tracker for lane following and obstacle-aware navigation, achieving stable autonomous laps at up to 40 km/h during competition</li>
-          <li>Conducted extensive on-vehicle debugging and system validation — diagnosing calibration errors, latency bottlenecks, and control instability across test sessions on the live race car</li>
-        </ul>
-        <div class="proj-actions">
-          <a href="experience.html" class="btn btn-outline">See in Experience →</a>
-        </div>
-      </div>
-    </div>
-    <div class="proj-tech-footer">
-      <span class="tag">Autonomous Driving</span>
-      <span class="tag">LiDAR</span>
-      <span class="tag">DBSCAN</span>
-      <span class="tag">Pure Pursuit</span>
-      <span class="tag">ROS</span>
-      <span class="tag">Python</span>
-      <span class="tag">C++</span>
-      <span class="tag">SICK MRS1000</span>
-      <span class="tag">FSAE Electric</span>
-    </div>
-  </div>
-
-  <!-- ====================================================
        7 — EV Battery Pack Design
        ==================================================== -->
   <div id="proj-7" class="project-full">
@@ -348,11 +306,11 @@
         <div class="project-badge-done" style="margin-bottom:0.75rem;">COMPLETED · Jan 2022 – May 2023</div>
         <p class="section-label" style="margin-bottom:0.4rem;">07 · EV Engineering · Orion Racing India</p>
         <h2>High-Voltage EV Battery Pack Design</h2>
-        <p class="proj-sub">7.9 kWh, 400 V lithium-polymer pack with BMS telemetry for Formula SAE Electric</p>
+        <p class="proj-sub">7.9 kWh, 400 V LiPo pack with BMS telemetry and thermal management for FSAE Electric</p>
         <ul class="proj-bullets">
-          <li>Led the design and fabrication of a 7.9 kWh, 400 V lithium-polymer battery pack — from cell selection and module layout through structural enclosure, wiring harness, and FSAE safety compliance</li>
-          <li>Integrated a BMS with real-time telemetry and fault reporting into the vehicle software stack for SoC monitoring, over-voltage protection, and cell-level temperature surveillance</li>
-          <li>Designed active thermal management pathways and passive cooling structures to maintain safe cell temperatures during high-discharge race conditions, validated across multiple track sessions</li>
+          <li>Designed and built a 7.9 kWh, 400 V LiPo battery pack: cell selection, module layout, structural enclosure, and FSAE safety compliance</li>
+          <li>Integrated BMS with real-time telemetry and fault reporting for SoC monitoring, over-voltage protection, and cell temperature surveillance</li>
+          <li>Designed thermal management pathways and passive cooling to maintain safe temperatures under high-discharge race conditions</li>
         </ul>
         <div class="proj-actions">
           <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>

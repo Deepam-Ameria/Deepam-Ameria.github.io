@@ -1480,3 +1480,92 @@ button { cursor: pointer; font: inherit; }
   justify-content: space-between;
 }
 .resume-embed-fallback a { color: var(--accent); }
+
+/* Simple Icons in tech stack */
+.tl-si {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+/* ============================================================
+   MOBILE IMPROVEMENTS
+   ============================================================ */
+
+/* Prevent horizontal overflow */
+body { overflow-x: hidden; }
+
+/* Better touch targets for buttons */
+@media (max-width: 768px) {
+  .btn { padding: 0.7rem 1.4rem; }
+
+  /* Hero adjustments */
+  .hero-eyebrow { justify-content: center; }
+  .hero-name { font-size: 2.4rem; }
+  .hero-typewriter { font-size: 1rem; }
+  .hero-title { font-size: 0.95rem; }
+
+  /* Project cards */
+  .project-card-body { min-height: auto; }
+  .project-media { min-height: 200px; }
+  .media-placeholder { min-height: 200px; }
+  .project-content { padding: 1.5rem; }
+  .project-tech-footer { padding: 0.65rem 1.5rem; }
+
+  /* Project full page */
+  .project-full-body { min-height: auto; }
+  .proj-media-ph { min-height: 200px; }
+  .proj-info { padding: 1.5rem; }
+  .proj-tech-footer { padding: 0.65rem 1.5rem; }
+
+  /* Timeline */
+  .timeline-head { padding: 1.25rem 1.25rem 1rem; }
+  .timeline-body { padding: 1.25rem; }
+  .tl-date { font-size: 0.6rem; }
+
+  /* Skills */
+  .skills-grid { grid-template-columns: 1fr 1fr; }
+  .skill-category { padding: 1.25rem; }
+
+  /* Tech logos wrap nicely */
+  .tech-logos-row { gap: 1rem 1.25rem; }
+  .tl-item { width: 46px; }
+  .tl-item i { font-size: 1.75rem; }
+
+  /* Contact */
+  .contact-text h2 { font-size: var(--fs-2xl); }
+
+  /* Exp card */
+  .exp-card { padding: 1.25rem; }
+}
+
+@media (max-width: 480px) {
+  :root { --section-py: 2.5rem; }
+  .container { padding: 0 1rem; }
+
+  .hero-name { font-size: 2rem; }
+  .hero-photo { width: 170px; height: 170px; }
+  .hero-actions { flex-direction: column; align-items: stretch; }
+  .hero-actions .btn { text-align: center; justify-content: center; }
+
+  .about-grid { gap: 1.5rem; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+
+  .page-hero { padding: calc(var(--nav-h) + 2rem) 0 2rem; }
+  .page-hero h1 { font-size: var(--fs-2xl); }
+
+  .timeline-head { gap: 0.75rem; }
+  .tl-logo { width: 40px; height: 40px; }
+  .tl-logo-ph { width: 40px; height: 40px; }
+
+  .tech-logos-row { gap: 0.85rem 1rem; }
+  .tl-item { width: 42px; }
+
+  .contact-inner { gap: 1.5rem; }
+
+  .exp-page-actions { flex-direction: column; }
+
+  .resume-iframe-wrap iframe { height: 500px; }
+}

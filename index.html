@@ -99,12 +99,7 @@
         <p class="hero-eyebrow">Robotics Engineer · CMU MRSD '26</p>
         <h1 class="hero-name">Deepam Ameria</h1>
         <p class="hero-typewriter"><span id="tw-text"></span><span class="tw-cursor"></span></p>
-        <h2 class="hero-title">Robot Learning &amp; Autonomous Systems · GPA 3.99 · Open to Roles</h2>
-        <p class="hero-desc">
-          I build autonomous robotic systems — from perception pipelines and learning-based policies
-          to full mechatronic integration. Currently a Research Assistant at CMU's Bot Intelligence
-          Group, working on real-time robot I/O frameworks and VLA policy deployment on humanoids.
-        </p>
+        <h2 class="hero-title">Robot Learning &amp; Autonomous Systems · Open to Roles</h2>
         <div class="hero-actions">
           <a href="projects.html" class="btn btn-primary">View My Work</a>
           <a href="#contact" class="btn btn-outline">Get in Touch</a>
@@ -134,34 +129,14 @@
     <div class="about-grid">
       <div class="about-text">
         <p>
-          I'm completing my <strong>Masters in Robotic Systems Development (MRSD)</strong> at
-          Carnegie Mellon University's Robotics Institute, graduating May 2026 with a <strong>3.99 GPA</strong>.
-          I'm a Research Assistant in the <strong>Bot Intelligence Group</strong> under
-          <a href="https://www.cs.cmu.edu/~./jeanoh/" target="_blank">Dr. Jean Oh</a>,
-          where I contribute to <strong>RIO</strong> — a flexible real-time Robot I/O framework
-          for unified sensor ingestion, teleoperation, and policy execution across robot embodiments
-          (under review at RSS 2026).
+          I'm completing my <strong>MRSD at Carnegie Mellon</strong> (GPA 3.99), graduating May 2026. Currently a Research Assistant at CMU's <strong>Bot Intelligence Group</strong> under
+          <a href="https://www.cs.cmu.edu/~./jeanoh/" target="_blank">Dr. Jean Oh</a>, building <strong>RIO</strong>, a real-time robot I/O framework for teleoperation and VLA policy deployment across robot embodiments (RSS 2026).
         </p>
         <p>
-          My work spans high-frequency teleoperation pipelines (50–80 Hz), multi-modal teleoperation
-          interfaces (VR controllers, SpaceMouse, master–slave manipulators), and evaluating
-          <strong>Vision-Language-Action (VLA) policies</strong> — including π0.5 and GR00T — on
-          real robot systems. I'm currently extending this work to Unitree G1 humanoid robots.
+          Most recently shipped: <strong>Lunar ROADSTER</strong>, the full autonomy stack for a lunar-grading rover under <a href="https://www.ri.cmu.edu/ri-faculty/william-red-l-whittaker/" target="_blank">Dr. Red Whittaker</a>, achieving 89% crater detection across 100+ field hours.
         </p>
         <p>
-          My active research project is <strong>multimodal pedestrian intent prediction</strong>
-          for autonomous driving — fusing visual features with text-based intent prompts and designing
-          attention mechanisms that ground fine-grained cues like gaze and posture in symbolic traffic
-          context. I recently completed my <strong>Lunar ROADSTER capstone</strong> under
-          <a href="https://www.ri.cmu.edu/ri-faculty/william-red-l-whittaker/" target="_blank">Dr. William "Red" Whittaker</a>,
-          building the full autonomy stack for a lunar-grading rover with 89% crater detection
-          accuracy across 100+ hours of field testing.
-        </p>
-        <p>
-          Before CMU, I spent a year at <strong>Yulu Bikes</strong> in Bangalore building real-time
-          state estimation and ML-based fall-prediction systems for electric micro-mobility, and led
-          the autonomous driving software stack at <strong>Orion Racing India</strong> for Formula SAE.
-          I'm looking for full-time roles in <strong>robot learning, embodied AI, and autonomous systems</strong>.
+          I'm into robot learning, embodied AI, VLA policies, and getting learned behaviors working reliably on real hardware. Open to full-time roles from May 2026.
         </p>
       </div>
 
@@ -185,7 +160,7 @@
           <span class="chip">📍 Pittsburgh, PA</span>
           <span class="chip">🎓 CMU MRSD · GPA 3.99</span>
           <span class="chip">🔬 RA @ Bot Intelligence Group</span>
-          <span class="chip">✅ Open to Roles — May 2026</span>
+          <span class="chip">✅ Open to Roles · May 2026</span>
         </div>
       </div>
     </div>
@@ -200,7 +175,7 @@
     <div class="section-header">
       <p class="section-label">Featured Projects</p>
       <h2 class="section-title">Selected Work</h2>
-      <p class="section-subtitle">Current research, completed capstone, and model-based control — all with real robots.</p>
+      <p class="section-subtitle">Current research, completed capstone, and model-based control. All with real robots.</p>
     </div>
 
     <div class="projects-stack">
@@ -223,9 +198,9 @@
             <h3>Multimodal Pedestrian Intent Prediction</h3>
             <p class="project-tagline">Text-guided vision transformers for autonomous driving safety</p>
             <ul class="project-bullets">
-              <li>Developing a multimodal intent prediction framework on the PIE dataset (300k+ frames, 1,842 pedestrians), fusing visual features with text-based intent prompts for robustness in ambiguous crossing scenarios</li>
-              <li>Designing text-guided visual attention mechanisms to ground fine-grained cues — gaze direction, body posture, head orientation — in symbolic traffic context</li>
-              <li>Benchmarking against spatio-temporal baselines (PIEint, I3D, SF-GRU, MaskPCPA) using success% and F1 score; stress-testing zero-shot generalization on VisionTrap edge cases</li>
+              <li>Building a multimodal intent prediction framework on PIE dataset (300k+ frames, 1,842 pedestrians), fusing visual features with text-based intent prompts</li>
+              <li>Designing text-guided attention to ground cues like gaze direction, posture, and head orientation in symbolic traffic context</li>
+              <li>Benchmarking against PIEint, I3D, SF-GRU, MaskPCPA baselines; testing zero-shot generalisation on VisionTrap edge cases</li>
             </ul>
             <div class="project-links">
               <a href="https://github.com/Deepam-Ameria" target="_blank" class="btn btn-outline">GitHub ↗</a>
@@ -256,9 +231,9 @@
             <h3>Lunar ROADSTER</h3>
             <p class="project-tagline">Full autonomy stack for a lunar-grading rover · Dr. William "Red" Whittaker</p>
             <ul class="project-bullets">
-              <li>Led the end-to-end autonomy stack development: depth perception, SkyCam localization, and multi-sensor state estimation within a ROS2 architecture deployed on NVIDIA Jetson</li>
-              <li>Trained a YOLOv8 crater detector for terrain understanding in unstructured lunar analog environments — achieved <strong style="color: var(--accent);">89% high-confidence detection</strong> across 100+ hours of field testing</li>
-              <li>Built an RGB-D geometric modelling pipeline to estimate crater geometry and plan autonomous grading trajectories and dozing decisions during live field trials</li>
+              <li>Built the full autonomy stack: depth perception, SkyCam localisation, and multi-sensor state estimation in ROS2 on NVIDIA Jetson</li>
+              <li>Trained YOLOv8 crater detector achieving <strong style="color: var(--accent);">89% high-confidence detection</strong> across 100+ hours of field testing</li>
+              <li>Built an RGB-D geometric pipeline to estimate crater geometry and plan autonomous grading trajectories during live field trials</li>
             </ul>
             <div class="project-links">
               <a href="https://mrsdprojects.ri.cmu.edu/2025teami/" target="_blank" class="btn btn-outline">Project Site ↗</a>
@@ -296,9 +271,9 @@
             <h3>Model-Based Control for Humanoid Soccer</h3>
             <p class="project-tagline">QP + trajectory optimization for target-directed kicking on Unitree G1</p>
             <ul class="project-bullets">
-              <li>Developed a model-based control framework for humanoid soccer kicking in the Unitree G1 simulation environment, integrating whole-body planning with accurate ball-strike execution</li>
-              <li>Formulated a Quadratic Program (QP) to compute optimal foot impulse and contact point for target-directed ball strikes, with Direct Collocation trajectory optimization for dynamically feasible kick paths</li>
-              <li>Implemented IHLQR and TVLQR for whole-body balance stabilization and accurate trajectory tracking throughout the kicking motion, handling ground-contact transitions</li>
+              <li>Developed model-based control for humanoid soccer kicking in Unitree G1 simulation, integrating whole-body planning with ball-strike execution</li>
+              <li>Formulated a QP for optimal foot impulse and contact point; used Direct Collocation to generate feasible kicking trajectories</li>
+              <li>Implemented IHLQR and TVLQR for balance and trajectory tracking throughout the kicking motion</li>
             </ul>
             <div class="project-links">
               <a href="projects.html" class="btn btn-outline">All Projects →</a>
@@ -333,7 +308,7 @@
     <div class="section-header">
       <p class="section-label">Experience</p>
       <h2 class="section-title">Latest Role</h2>
-      <p class="section-subtitle">From legged robot autonomy to VLA policy deployment — industry and research experience across three countries.</p>
+      <p class="section-subtitle">From legged robot autonomy to industry and research experience in robot learning, autonomy, and EV systems, across three countries.</p>
     </div>
 
     <div class="exp-preview">
@@ -349,10 +324,10 @@
           </div>
         </div>
         <ul class="exp-bullets">
-          <li>Contributing to <strong>RIO</strong> — a flexible real-time Robot I/O framework for unified sensor ingestion, teleoperation, and policy execution across robot embodiments (RSS 2026 submission)</li>
-          <li>Supporting high-frequency teleoperation pipelines (50–80 Hz), enabling large-scale robot demonstration collection across single-arm and bimanual systems for downstream policy learning</li>
-          <li>Evaluating deployment of Vision-Language-Action (VLA) policies — π0.5 and GR00T — on real robot systems; extending the framework to Unitree G1 humanoid robots</li>
-          <li>Designed multi-modal teleoperation interfaces (VR controllers, SpaceMouse, master–slave manipulators) for scalable human-in-the-loop data acquisition</li>
+          <li>Building <strong>RIO</strong>, a real-time Robot I/O framework for unified sensor ingestion, teleoperation, and policy execution across robot embodiments (RSS 2026)</li>
+          <li>Built high-frequency teleoperation pipelines (50-80 Hz) for large-scale demonstration collection on single-arm and bimanual systems</li>
+          <li>Evaluating VLA policies (pi0.5, GR00T) on real robots; extending the framework to Unitree G1 humanoids</li>
+          <li>Designed multi-modal teleoperation interfaces (VR, SpaceMouse, master-slave) for scalable human-in-the-loop data acquisition</li>
         </ul>
         <div class="tag-row">
           <span class="tag">Robot Learning</span>
@@ -456,14 +431,22 @@
         <div class="tl-item"><i class="devicon-cplusplus-plain colored"></i><span class="tl-name">C++</span></div>
         <div class="tl-item"><i class="devicon-pytorch-original colored"></i><span class="tl-name">PyTorch</span></div>
         <div class="tl-item"><i class="devicon-opencv-plain colored"></i><span class="tl-name">OpenCV</span></div>
-        <div class="tl-item"><i class="devicon-jupyter-plain colored"></i><span class="tl-name">Jupyter</span></div>
         <div class="tl-item"><i class="devicon-numpy-plain colored"></i><span class="tl-name">NumPy</span></div>
         <div class="tl-item"><i class="devicon-docker-plain colored"></i><span class="tl-name">Docker</span></div>
         <div class="tl-item"><i class="devicon-git-plain colored"></i><span class="tl-name">Git</span></div>
         <div class="tl-item"><i class="devicon-linux-plain colored"></i><span class="tl-name">Linux</span></div>
-        <div class="tl-item"><span class="tl-badge">MAT</span><span class="tl-name">MATLAB</span></div>
-        <div class="tl-item"><span class="tl-badge" style="font-size:0.5rem;">ROS2</span><span class="tl-name">ROS / ROS2</span></div>
-        <div class="tl-item"><span class="tl-badge">GYM</span><span class="tl-name">Isaac Gym</span></div>
+        <div class="tl-item">
+          <img src="https://cdn.simpleicons.org/matlab/58a6ff" alt="MATLAB" class="tl-si" />
+          <span class="tl-name">MATLAB</span>
+        </div>
+        <div class="tl-item">
+          <img src="https://cdn.simpleicons.org/ros/58a6ff" alt="ROS" class="tl-si" />
+          <span class="tl-name">ROS / ROS2</span>
+        </div>
+        <div class="tl-item">
+          <img src="https://cdn.simpleicons.org/solidworks/58a6ff" alt="SolidWorks" class="tl-si" />
+          <span class="tl-name">SolidWorks</span>
+        </div>
       </div>
     </div>
 
@@ -537,7 +520,7 @@
         <p>
           I'm graduating in May 2026 and actively looking for full-time roles in
           <strong style="color:var(--text);">robot learning, embodied AI, and autonomous systems</strong>.
-          Whether you want to discuss research, collaboration, or opportunities — my inbox is open.
+          Whether you want to discuss research, collaboration, or opportunities, my inbox is open.
         </p>
         <br />
         <p>
